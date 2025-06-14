@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>K리그 1부 팀 리스트</h2>
-<table border="1" cellspacing="0" cellpadding="5" style="width: 100%; border-collapse: collapse;">
+<table style="width: 100%; border-collapse: collapse;">
     <thead>
     <tr>
         <th style="text-align: center;">구단 이름</th>
@@ -17,14 +17,14 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="team" items="${teams }">
+    <c:forEach var="team" items="${teams}">
         <tr>
             <td style="text-align: center;">${team.teamName}</td>
             <td style="text-align: center;">
-                <a target="_blank" class="hover:underline" href="${team.homepage }">${team.homepage }</a>
+                <a target="_blank" class="hover:underline" href="${team.teamLogo }">${team.teamHomepage }</a>
             </td>
             <td style="text-align: center;">
-                <img src="${team.logo}" srcset="${team.logoSrcSet}" width="32px" />
+                <img src="${team.teamLogo}"/>
             </td>
         </tr>
     </c:forEach>

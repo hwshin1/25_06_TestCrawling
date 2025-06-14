@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.testcrawling.repository.LogoRepository">
+    <insert id="logoInsert" parameterType="map">
+        INSERT INTO team
+        SET team_logo = #{teamLogo},
+        team_name = #{teamName},
+        team_location = #{teamHomepage}
+    </insert>
+</mapper>
